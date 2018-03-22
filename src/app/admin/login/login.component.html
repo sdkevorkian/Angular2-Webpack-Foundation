@@ -1,1 +1,33 @@
-<h1>Login Page</h1>
+<div class="row expanded align-center">
+    <h1>Login to Your Account</h1>
+</div>
+
+<div class="row align-center">
+    <form>
+        <div class="small-12 columns">
+            <label>Username</label>
+            <input type="text" placeholder="Enter email address" name="email" id="email"
+                   [(ngModel)]="email" required #em="ngModel" />
+            <div [hidden]="em.valid || em.pristine" class="alert callout">
+                Email is required
+            </div>
+        </div>
+        <div class="small-12 columns">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" name="password" id="password"
+                   [(ngModel)]="password" required #pw="ngModel" />
+            <div [hidden]="pw.valid || pw.pristine" class="alert callout">
+                Password required
+            </div>
+        </div>
+        <div class="small-12 columns">
+            <div class="expanded button-group">
+                <a class="success button" (click)="login()">Login</a>
+                <a class="button" (click)="signup()">Sign Up</a>
+            </div>
+            <div class="small-12 columns">
+                <p class="text-center simlink" (click)="cancel()">Back to Main Site</p>
+            </div>
+        </div>
+    </form>
+</div>
