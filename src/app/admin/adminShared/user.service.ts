@@ -22,7 +22,7 @@ export class UserService implements CanActivate {
                 authDomain: "gigabytegames-63afd.firebaseapp.com",
                 databaseURL: "https://gigabytegames-63afd.firebaseio.com",
                 projectId: "gigabytegames-63afd",
-                storageBucket: "",
+                storageBucket: "gigabytegames-63afd.appspot.com",
                 messagingSenderId: "401631707517"
             };
       firebase.initializeApp(config);
