@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public\\sass",
     "\\src",
     "\\src\\app",
     "\\src\\app\\admin",
-    "\\src\\app\\admin\\adminComponent",
-    "\\src\\app\\admin\\adminMenu",
     "\\src\\app\\admin\\adminShared",
-    "\\src\\app\\admin\\logIn",
-    "\\src\\app\\admin\\signUp",
-    "\\src\\app\\shared"
+    "\\src\\app\\admin\\blogAdd",
+    "\\src\\app\\admin\\blogAdmin",
+    "\\src\\app\\home"
   ],
-  "SelectedNode": "\\src\\app\\admin\\adminMenu\\admin-menu.component.css",
+  "SelectedNode": "\\src\\app\\home\\home.component.html",
   "PreviewInSolutionExplorer": false
 }

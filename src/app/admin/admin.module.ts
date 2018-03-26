@@ -14,6 +14,8 @@ import { BlogAddComponent } from './blogAdd/blog-add.component';
 import { UserService } from './adminShared/user.service';
 import { BlogAdminService } from './adminShared/blog-admin.service';
 
+import { TruncatePipe } from './adminShared/trunc.pipe';
+
 const AdminRoutes: Routes = [
     {
         path: 'admin',
@@ -34,7 +36,8 @@ const AdminRoutes: Routes = [
         RouterModule.forChild(AdminRoutes)
     ],
     exports: [
-        RouterModule
+        RouterModule,
+        TruncatePipe //access to components not in this module
     ],
     declarations: [
         AdminComponent,
@@ -42,7 +45,8 @@ const AdminRoutes: Routes = [
         SignUpComponent,
         LoginComponent,
         BlogAdminComponent,
-        BlogAddComponent
+        BlogAddComponent,
+        TruncatePipe // access to components in this module
     ],
     providers: [
         UserService,

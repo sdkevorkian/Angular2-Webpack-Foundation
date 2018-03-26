@@ -14,6 +14,8 @@ export class BlogAdminComponent implements OnInit {
     theUser: string;
     menuChoice: string;
     blogPosts: Blog[];
+    formDisplay: boolean = true; // display list or form
+    singlePost: Blog;
 
     constructor(
         private userSVC: UserService,
@@ -39,11 +41,30 @@ export class BlogAdminComponent implements OnInit {
         dbRef.once('value') //once is a listener and responds to value
             .then((snapshot) => {
                 let temp: string[] = snapshot.val();
-                console.log(temp);
-                console.log('blog admin comp');
                 this.blogPosts = Object.keys(temp).map(key => temp[key]);
-                console.log(this.blogPosts);
             })
     }
+    editPost(thePost: Blog) {
+        this.singlePost = thePost;
+        this.formDisplay = false;
+    }
 
+    cancelEdit() {
+        this.formDisplay = true;
+    }
+
+    updatePost(single: Blog) {
+        this.blogAdminSVC.editPost(single);
+        this.formDisplay = true;
+    }
+
+    deletePost(single: Blog) {
+        let verify = confirm(`are you sure you want to delete the post?`);
+        if (verify) {
+            this.blogAdminSVC.removePost(single);
+            this.router.navigate(['/admin']);
+        } else {
+            alert(`it's ok! nothing deleted!`);
+        }
+    }
 }

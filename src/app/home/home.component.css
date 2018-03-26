@@ -1,3 +1,26 @@
 .hero {
     width: 100%;
 }
+
+.medium-4 {
+    width: 25%;
+    display: inline-block;
+}
+
+.display-image {
+    height: 200px;
+    width: 100%;
+}
+
+.spacing {
+    margin-top: 100px;
+}
+
+.card-spacing {
+    padding-bottom: 40px;
+}
+
+.list-title:hover{ 
+    color: #0000ff;
+    cursor: pointer;
+}

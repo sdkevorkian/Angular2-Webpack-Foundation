@@ -37,7 +37,7 @@ export class BlogAddComponent {
 
         this.blogAdminSVC.createPost(this.post);
         alert(`${this.postTitle} added to posts`);
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/admin']); //figure out how to reload same page
     }
 
     cancel() {
