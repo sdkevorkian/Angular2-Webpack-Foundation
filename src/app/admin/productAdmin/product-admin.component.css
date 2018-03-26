@@ -1,0 +1,18 @@
+.top-bar-title {
+    font-size: 24px;
+    color: #fff;
+}
+
+.admin-menu a {
+    color: #fff;
+}
+
+.mini-img{
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.spacer {
+    padding-top: 20px;
+    border-top: solid 1px #000;
+}

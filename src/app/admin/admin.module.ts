@@ -11,8 +11,12 @@ import { SignUpComponent } from './signup/sign-up.component';
 import { BlogAdminComponent } from './blogAdmin/blogAdmin.component';
 import { BlogAddComponent } from './blogAdd/blog-add.component';
 
+import { ProductAdminComponent } from './productAdmin/product-admin.component';
+import { ProductAddComponent } from './productAdd/product-add.component';
+
 import { UserService } from './adminShared/user.service';
 import { BlogAdminService } from './adminShared/blog-admin.service';
+import { ProductAdminService } from './adminShared/product-admin.service';
 
 import { TruncatePipe } from './adminShared/trunc.pipe';
 
@@ -22,6 +26,7 @@ const AdminRoutes: Routes = [
         component: AdminComponent,
         children: [
             { path: 'blog-admin', component: BlogAdminComponent, canActivate: [UserService] },
+            { path: 'product-admin', component: ProductAdminComponent, canActivate: [UserService] },
             { path: 'login', component: LoginComponent },
             { path: 'signup', component: SignUpComponent },
             { path: '', component: AdminMenuComponent, canActivate: [UserService] } //canActivate is a route guard
@@ -37,7 +42,7 @@ const AdminRoutes: Routes = [
     ],
     exports: [
         RouterModule,
-        TruncatePipe //access to components not in this module
+        TruncatePipe, //access to components not in this module
     ],
     declarations: [
         AdminComponent,
@@ -46,11 +51,14 @@ const AdminRoutes: Routes = [
         LoginComponent,
         BlogAdminComponent,
         BlogAddComponent,
-        TruncatePipe // access to components in this module
+        ProductAdminComponent,
+        ProductAddComponent,
+        TruncatePipe, // access to components in this module
     ],
     providers: [
         UserService,
-        BlogAdminService
+        BlogAdminService,
+        ProductAdminService
     ]
 })
 

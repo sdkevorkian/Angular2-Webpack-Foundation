@@ -5,8 +5,12 @@ import { AppComponent } from './start/app.component';
 
 import { NavComponent } from './shared/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component'; // import here bcause nav only available to components declared here (nav is not exported)
 import { ErrorComponent } from './error/error.component';
-import { AppRoutingModule } from './shared/app.routing';
+import { AppRoutingModule } from './shared/app.routing'; 
+
+import { ShoppingCartService } from './shared/shopping-cart.service';
 
 import { AdminModule } from './admin/admin.module';
 
@@ -20,8 +24,11 @@ import { AdminModule } from './admin/admin.module';
         AppComponent, // tell what components we are using
         NavComponent,
         HomeComponent,
+        ShopComponent,
+        CartComponent,
         ErrorComponent
     ],
-    bootstrap: [ AppComponent ] //component that launches when app starts, initiated from main.ts
+    providers: [ShoppingCartService],
+    bootstrap: [AppComponent] //component that launches when app starts, initiated from main.ts
 })
 export class AppModule { } // lets us make this available to other components
