@@ -39,5 +39,5 @@ export class CartComponent implements OnInit {
         this.cartSVC.clearCart();
         this.cart = [];
         this.cartTotal = this.sumCart(this.cart);
-s    }
+     }
 }
