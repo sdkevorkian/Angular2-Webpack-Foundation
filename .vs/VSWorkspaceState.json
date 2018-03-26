@@ -1,15 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public\\sass",
-    "\\src",
+    "\\dist",
+    "\\dist\\assets",
     "\\src\\app",
-    "\\src\\app\\admin",
-    "\\src\\app\\admin\\adminShared",
     "\\src\\app\\admin\\blogAdd",
-    "\\src\\app\\admin\\blogAdmin",
-    "\\src\\app\\home"
+    "\\src\\app\\cart",
+    "\\src\\app\\productDetail",
+    "\\src\\app\\shared",
+    "\\src\\app\\start"
   ],
-  "SelectedNode": "\\src\\app\\home\\home.component.html",
+  "SelectedNode": "\\y",
   "PreviewInSolutionExplorer": false
 }
